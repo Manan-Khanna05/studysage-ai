@@ -1,0 +1,87 @@
+/* StudySage AI — Apple Light System (see apple.com-design.md)
+   Tokens: primary #0071e3, secondary #2997ff, tertiary #0066cc,
+   neutral #f5f5f7, surface #ffffff, on-surface #1d1d1f,
+   error #d92d20, border #e5e7eb. No gradients, no heavy shadows. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px; line-height: 1.47; color: #1d1d1f; background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.page { min-height: 100vh; }
+.nav { border-bottom: 1px solid #e5e7eb; background: #ffffff; position: sticky; top: 0; z-index: 10; }
+.nav-inner { max-width: 1024px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; gap: 24px; }
+.logo { font-weight: 700; font-size: 17px; color: #1d1d1f; }
+.nav nav { display: flex; gap: 24px; flex: 1; }
+.nav nav a { font-size: 12px; line-height: 1.33; color: #1d1d1f; }
+.nav-note { font-size: 12px; color: #6e6e73; }
+.hero { text-align: center; padding: 70px 24px 54px; max-width: 1024px; margin: 0 auto; }
+.hero h1 { font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 47px; font-weight: 600; line-height: 60px; letter-spacing: -0.28px; margin: 0 0 24px; }
+.hero-sub { font-size: 28px; line-height: 42px; letter-spacing: 0.196px; color: #1d1d1f; max-width: 700px; margin: 0 auto 24px; font-weight: 400; }
+.hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+.hero-note { font-size: 14px; line-height: 1.43; color: #6e6e73; max-width: 640px; margin: 0 auto; }
+.section { padding: 54px 24px; }
+.section-neutral { background: #f5f5f7; }
+.container { max-width: 1024px; margin: 0 auto; }
+h2 { font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 40px; font-weight: 600; line-height: 44px; margin: 0 0 16px; }
+h3 { font-size: 33px; font-weight: 600; line-height: 40px; margin: 24px 0 16px; }
+h3:first-child { margin-top: 0; }
+.section-sub { font-size: 17px; color: #1d1d1f; margin: 0 0 24px; max-width: 700px; }
+textarea {
+  width: 100%; font-family: inherit; font-size: 17px; line-height: 1.47; color: #1d1d1f;
+  background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 11px 16px; resize: vertical;
+}
+textarea:focus, .fill-input:focus { outline: 2px solid #0071e3; outline-offset: 1px; border-color: #0071e3; }
+.input-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+.count { font-size: 14px; color: #6e6e73; margin-right: auto; }
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 11px 21px;
+  background: #0071e3; color: #ffffff; border: none; border-radius: 9999px;
+  font-family: inherit; font-size: 17px; line-height: 1.47; cursor: pointer;
+}
+.btn-primary:hover { background: #0077ed; }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 11px 21px;
+  background: transparent; color: #2997ff; border: none; border-radius: 9999px;
+  font-family: inherit; font-size: 17px; line-height: 1.47; cursor: pointer;
+}
+.btn-secondary:hover { background: #f5f5f7; }
+.btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+.file-label { cursor: pointer; }
+.error { color: #d92d20; font-size: 14px; margin-top: 16px; }
+.source-note { font-size: 14px; line-height: 1.43; color: #6e6e73; margin-top: 16px; }
+.method { font-size: 14px; line-height: 1.43; color: #6e6e73; margin-top: 24px; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 24px 0; }
+.tab { height: 44px; padding: 11px 21px; border-radius: 9999px; border: 1px solid #e5e7eb; background: #ffffff; color: #1d1d1f; font-size: 15px; line-height: 1.4; cursor: pointer; font-family: inherit; }
+.tab.active { background: #0071e3; border-color: #0071e3; color: #ffffff; }
+.card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-top: 16px; }
+.summary-list { margin: 0 0 16px; padding-left: 24px; }
+.summary-list li { margin-bottom: 8px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { background: #f5f5f7; color: #1d1d1f; font-size: 13px; line-height: 1.38; border-radius: 9999px; padding: 6px 12px; }
+.flashcard { cursor: pointer; min-height: 180px; display: flex; flex-direction: column; justify-content: space-between; }
+.card-label { font-size: 13px; line-height: 1.38; color: #6e6e73; }
+.flash-text { font-size: 28px; line-height: 42px; font-weight: 400; margin: 16px 0; }
+.quiz-q { font-size: 17px; white-space: pre-line; }
+.options { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+.option { text-align: left; padding: 11px 16px; border: 1px solid #e5e7eb; border-radius: 8px; background: #ffffff; font-size: 17px; font-family: inherit; cursor: pointer; }
+.option.selected { border-color: #0071e3; background: #f5f5f7; }
+.fill-input { width: 100%; padding: 11px 16px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 17px; font-family: inherit; margin: 16px 0; }
+.correct { color: #0071e3; font-weight: 600; }
+.wrong { color: #d92d20; font-weight: 600; }
+.score { font-size: 28px; line-height: 42px; }
+.timer-card { text-align: center; }
+.timer-display { font-size: 56px; font-weight: 700; line-height: 67px; margin: 24px 0; font-variant-numeric: tabular-nums; }
+.footer { background: #f5f5f7; padding: 54px 24px; text-align: center; font-size: 14px; line-height: 1.43; color: #6e6e73; }
+.footer p { max-width: 700px; margin: 0 auto 8px; }
+@media (max-width: 640px) {
+  .hero h1 { font-size: 40px; line-height: 44px; }
+  .hero-sub { font-size: 17px; line-height: 1.47; }
+  h2 { font-size: 33px; line-height: 40px; }
+  .nav-note { display: none; }
+  .flash-text { font-size: 17px; line-height: 1.47; }
+}
